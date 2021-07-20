@@ -13,8 +13,6 @@ $font-family: Comfortaa;
 p {
     margin-block-start: 0;
     margin-block-end: 0;
-    font-family: Comfortaa;
-    font-size: 16px;
 }
 
 @mixin absolute-center {
@@ -525,7 +523,7 @@ p {
     }
 }
 
-.tagline {
+.sezzle-tagline {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 13px;
@@ -566,7 +564,7 @@ p {
     display: flex;
 }
 
-.justify-center {
+.sezzle-justify-center {
     justify-content: center;
 }
 
@@ -574,7 +572,7 @@ p {
     align-items: center
 }
 
-.checkmark {
+.sezzle-checkmark {
     margin-right: 8px;
     display: inline-block;
 }
