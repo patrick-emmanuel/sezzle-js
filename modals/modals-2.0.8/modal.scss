@@ -45,6 +45,11 @@ p {
     }
 
     .sezzle-modal {
+        p {
+           font-family: $font-family;
+           font-size: 16px;
+        }
+
         @include absolute-center();
         -webkit-box-shadow: 0 10px 20px rgba(5, 31, 52, 0.19), 0 6px 6px rgba(5, 31, 52, 0.2);
         box-shadow: 0 10px 20px rgba(5, 31, 52, 0.19), 0 6px 6px rgba(5, 31, 52, 0.2);
