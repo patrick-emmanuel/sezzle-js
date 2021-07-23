@@ -56,7 +56,7 @@ class Utils {
   static checkForCompetitorWidget() {
     let count = 0;
     Array.prototype.forEach.call(competitorClasses, (el) => {
-      if (document.getElementsByClassName(el)) count++;
+      if (document.getElementsByClassName(el).length) count++;
     });
     return count > 0;
   }
