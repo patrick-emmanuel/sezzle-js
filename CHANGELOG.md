@@ -254,7 +254,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 
 - isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place
 
-### v20.12.1 - Released 7 Aug 2018
+### v20.12.1
 
 * Change DE 2.0.0 and 2.0.1 modals to weeks, set up modal versions 2.0.2 and 2.0.3 for EU monthly payment schedule
 
@@ -274,7 +274,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 
 - isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place
 
-### v20.12.2 - Released 7 Aug 2018
+### v20.12.2
 
 * Update gulp release protocol to post versions to both US and EU 
 
@@ -336,7 +336,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 
 - competitor event is firing on every merchant. if block needs .length
 
-### v21.4.0 - Released 7 Aug 2021
+### v21.4.0 - Released 20 Apr 2021
 
 * Add EU translation support to modal refactor
 
@@ -348,7 +348,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 
 * Add function to detect background color to select contrasting logo for default “theme” option.
 
-### v21.4.1 - Released 7 Aug 2018
+### v21.4.1 - Released 24 Apr 2021
 
 
 * Set theme default to auto-detect merchant’s background color and apply contrasting logo
@@ -403,7 +403,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 
 - competitor event is firing on every merchant. if block needs .length
 
-### v21.5.1 - Released 7 Aug 2018
+### v21.5.1 - Released 28 May 2021
 
 * Change maxWidth default to 485
 
