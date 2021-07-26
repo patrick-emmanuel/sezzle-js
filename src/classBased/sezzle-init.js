@@ -10,7 +10,7 @@ try  {
 function logErrors(message) {
     const trackingURL = document.widgetServerBaseUrl ? `${document.widgetServerBaseUrl}/v1/event/log` : 'https://widget.sezzle.com/v1/event/log';
     const body = {
-        error: message
+        event_name: message,
     };
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
