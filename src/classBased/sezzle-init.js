@@ -6,12 +6,15 @@ try  {
 } catch(e) {
     logErrors(e.message)
 }
+console.log(document.sezz)
 
 function logErrors(message) {
     const trackingURL = document.widgetServerBaseUrl ? `${document.widgetServerBaseUrl}/v1/event/log` : 'https://widget.sezzle.com/v1/event/log';
     const body = {
         event_name: "error",
-        description: message
+        description: message,
+        merchant_uuid: document.sezzleConfig.merchantID,
+        merchant_site: window.location.hostname
     };
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
