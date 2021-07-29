@@ -37,6 +37,7 @@ class Modal {
     const sezzleModalLinks = this._sezzleElement.getElementsByClassName('sezzle-modal-link');
     Array.prototype.forEach.call(sezzleModalLinks, (modalLink) => {
       modalLink.addEventListener('click', (event) => {
+        event.target.id = 'sezzle-modal-return';
         if (!event.target.classList.contains('no-sezzle-info')) {
           let modalNode;
           // Makes sure to get rid of AP, QP, Affirm, and Klarna modals in our Sezzle modal event listener
@@ -80,6 +81,7 @@ class Modal {
       const modalLinks = this._sezzleElement.getElementsByClassName(`${vendor}-modal-info-link`);
       Array.prototype.forEach.call(modalLinks, (modalLink) => {
         modalLink.addEventListener('click', (event) => {
+          event.target.id = 'sezzle-modal-return';
           this._disableBodyScroll(true);
           // Show modal node
           document.getElementsByClassName(`sezzle-${vendor}-modal`)[0].style.display = 'block';
@@ -140,7 +142,13 @@ class Modal {
         for (let i = 0; i < modals.length; i++) {
           modals[i].style.display = 'none';
         }
-        document.querySelector('.sezzle-checkout-button-wrapper').getElementsByTagName('button')[0].focus();
+        const newFocus = document.querySelector('#sezzle-modal-return');
+        if (newFocus) {
+          newFocus.focus();
+          newFocus.removeAttribute('id');
+        } else {
+          document.querySelector('.sezzle-checkout-button-wrapper').getElementsByTagName('button')[0].focus();
+        }
       }
     });
   }
@@ -196,7 +204,13 @@ class Modal {
         document.body.ariaHidden = false;
         // Add hidden class hide the item
         this._modalNode.getElementsByClassName('sezzle-modal')[0].className = 'sezzle-modal sezzle-checkout-modal-hidden';
-        document.querySelector('.sezzle-checkout-button-wrapper').getElementsByTagName('button')[0].focus();
+        const newFocus = document.querySelector('#sezzle-modal-return');
+        if (newFocus) {
+          newFocus.focus();
+          newFocus.removeAttribute('id');
+        } else {
+          document.querySelector('.sezzle-checkout-button-wrapper').getElementsByClassName('sezzle-info-icon')[0].focus();
+        }
       });
     });
     // Event listener to prevent close in modal if click happens within sezzle-checkout-modal
@@ -228,7 +242,13 @@ class Modal {
           this._disableBodyScroll(false);
           modalNode.style.display = 'none';
           document.body.ariaHidden = false;
-          document.querySelector('.sezzle-checkout-button-wrapper').getElementsByClassName('no-sezzle-info')[0].focus();
+          const newFocus = document.querySelector('#sezzle-modal-return');
+          if (newFocus) {
+            newFocus.focus();
+            newFocus.removeAttribute('id');
+          } else {
+            document.querySelector('.sezzle-checkout-button-wrapper').getElementsByClassName(`${vendor}-modal-info-link`)[0].focus();
+          }
           event.stopPropagation();
         });
       }
