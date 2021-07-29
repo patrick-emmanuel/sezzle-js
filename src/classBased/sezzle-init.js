@@ -6,7 +6,7 @@ try  {
 } catch(e) {
     logErrors(e.message)
 }
-console.log(document.sezz)
+
 
 function logErrors(message) {
     const trackingURL = document.widgetServerBaseUrl ? `${document.widgetServerBaseUrl}/v1/event/log` : 'https://widget.sezzle.com/v1/event/log';
