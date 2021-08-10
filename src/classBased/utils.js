@@ -140,6 +140,7 @@ class Utils {
     }
     return 'light';
   }
+
 }
 
 // eslint-disable-next-line import/prefer-default-export

@@ -225,7 +225,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 - <b>parseMode cannot be set to ‘period’</b>
 - <b>Price handling breaks if cents have more than two places - see PureHockey</b>
 - <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
-- competitor event is firing on every merchant. if block needs .length (fixed in 21.7.0)
+- competitor event is firing on every merchant. if block needs .length (fixed in 21.6.5)
 
 
 ## v21.4.0 - Released 20 Apr 2021
@@ -243,7 +243,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 - <b>parseMode cannot be set to ‘period’</b>
 - <b>Price handling breaks if cents have more than two places - see PureHockey</b>
 - <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
-- competitor event is firing on every merchant. if block needs .length (fixed in 21.7.0)
+- competitor event is firing on every merchant. if block needs .length (fixed in 21.6.5)
 
 
 ## v21.4.1 - Released 23 Apr 2021
@@ -261,7 +261,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 - <b>parseMode cannot be set to ‘period’</b>
 - <b>Price handling breaks if cents have more than two places - see PureHockey</b>
 - <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
-- competitor event is firing on every merchant. if block needs .length (fixed in 21.7.0)
+- competitor event is firing on every merchant. if block needs .length (fixed in 21.6.5)
 
 
 ## v21.5.0 - Released 10 May 2021
@@ -276,7 +276,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 - <b>parseMode cannot be set to ‘period’</b>
 - <b>Price handling breaks if cents have more than two places - see PureHockey</b>
 - <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
-- competitor event is firing on every merchant. if block needs .length (fixed in 21.7.0)
+- competitor event is firing on every merchant. if block needs .length (fixed in 21.6.5)
 
 
 ## v21.5.1 - Released 28 May 2021
@@ -291,7 +291,8 @@ These are the config options that either aren’t working, aren’t used, or sho
 - <b>parseMode cannot be set to ‘period’</b>
 - <b>Price handling breaks if cents have more than two places - see PureHockey</b>
 - <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
-- competitor event is firing on every merchant. if block needs .length (fixed in 21.7.0)
+- competitor event is firing on every merchant. if block needs .length (fixed in 21.6.5)
+
 
 ## v21.5.3 - Released 28 May 2021
 * Changed theme default to empty string to allow predictBackgroundtheme
@@ -301,7 +302,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 - <b>parseMode cannot be set to ‘period’</b>
 - <b>Price handling breaks if cents have more than two places - see PureHockey</b>
 - <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
-- competitor event is firing on every merchant. if block needs .length (fixed in 21.7.0)
+- competitor event is firing on every merchant. if block needs .length (fixed in 21.6.5)
 
 
 ## v21.6.0 - Released 10 June 2021
@@ -313,7 +314,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 - <b>parseMode cannot be set to ‘period’</b>
 - <b>Price handling breaks if cents have more than two places - see PureHockey</b>
 - <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
-- competitor event is firing on every merchant. if block needs .length (fixed in 21.7.0)
+- competitor event is firing on every merchant. if block needs .length (fixed in 21.6.5)
 
 
 ## v21.6.2 - Released 28 June 2021
@@ -324,7 +325,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 - <b>parseMode cannot be set to ‘period’</b>
 - <b>Price handling breaks if cents have more than two places - see PureHockey</b>
 - <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
-- competitor event is firing on every merchant. if block needs .length (fixed in 21.7.0)
+- competitor event is firing on every merchant. if block needs .length (fixed in 21.6.5)
 - Breaking change typo in modalNode attributes - should be _modalNode (fixed in 21.6.4)
 
 
@@ -337,9 +338,26 @@ These are the config options that either aren’t working, aren’t used, or sho
 - <b>parseMode cannot be set to ‘period’</b>
 - <b>Price handling breaks if cents have more than two places - see PureHockey</b>
 - <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
-- competitor event is firing on every merchant. if block needs .length (fixed in 21.7.0)
+- competitor event is firing on every merchant. if block needs .length (fixed in 21.6.5)
 
-## v21.7.0
-* Fix competitor event bug
-* Implement error event logging
-* Implement Sezzle Spend handling
+
+## v21.6.5 - Released 2 Aug 2021
+* Add error event logging
+* fix competitor event bug
+
+### Known Issues
+- <b>Afterpay logo is too small</b
+- <b>parseMode cannot be set to ‘period’</b>
+- <b>Price handling breaks if cents have more than two places - see PureHockey</b>
+- <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
+
+
+## v21.8.0 - Released
+* Implement Sezzle Spend widget behaviour
+
+### Known Issues
+- <b>Afterpay logo is too small</b
+- <b>parseMode cannot be set to ‘period’</b>
+- <b>Price handling breaks if cents have more than two places - see PureHockey</b>
+- <b>isCommaDelimited does not auto-detect correctly when widget has only 1 decimal place</b>
+
