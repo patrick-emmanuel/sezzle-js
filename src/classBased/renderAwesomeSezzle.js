@@ -210,6 +210,40 @@ class renderAwesomeSezzle {
         sezzleButtonText.appendChild(questionMarkButton);
         break;
       }
+      case 'shoppay-logo': {
+        var shoppayNode = document.createElement('img');
+        shoppayNode.className = 'sezzle-shoppay-logo shoppay-modal-info-link no-sezzle-info';
+        shoppayNode.src = 'https://media.sezzle.com/sezzle-credit-website-assets/shop-pay-logo.svg';
+        shoppayNode.style.maxHeight = '20px';
+        shoppayNode.style.verticalAlign = 'middle';
+        shoppayNode.alt = 'ShopPay';
+        sezzleButtonText.appendChild(shoppayNode);
+        break;
+       }
+       case 'shoppay-info-icon': {
+        const shopPayInfoIconNode = document.createElement('button');
+        shopPayInfoIconNode.role = 'button';
+        shopPayInfoIconNode.type = 'button';
+        shopPayInfoIconNode.ariaLabel = 'Learn More about Affirm';
+        shopPayInfoIconNode.className = 'affirm-modal-info-link no-sezzle-info';
+        shopPayInfoIconNode.innerHTML = '&#9432;';
+        shopPayInfoIconNode.ariaHasPopup = 'true';
+        shopPayInfoIconNode.style = `display: inline; width: auto; min-height: 9px; max-height: 20px; font-size: ${this._config.configGroups[configGroupIndex].fontSize}px;`;
+        sezzleButtonText.appendChild(shopPayInfoIconNode);
+        break;
+      }
+      case 'shoppay-link-icon': {
+        const shopPayAnchor = document.createElement('a');
+        shopPayAnchor.href = this._config.shopPayLink;
+        shopPayAnchor.target = '_blank';
+        const shopPayLinkIconNode = document.createElement('code');
+        shopPayLinkIconNode.ariaLabel = 'Open Affirm in a new tab';
+        shopPayLinkIconNode.className = 'affirm-info-link';
+        shopPayLinkIconNode.innerHTML = '&#9432;';
+        shopPayAnchor.appendChild(shopPayLinkIconNode);
+        sezzleButtonText.appendChild(shopPayAnchor);
+        break;
+      }
       case 'affirm-logo': {
         const affirmNode = document.createElement('img');
         affirmNode.className = 'sezzle-affirm-logo affirm-modal-info-link no-sezzle-info';

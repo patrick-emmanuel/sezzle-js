@@ -10,7 +10,7 @@ class Modal {
     this._modalNode = null;
     this._sezzleElement = null;
     this._configGroupIndex = null;
-    this._vendorsSupportedForDualInstall = ['ap', 'qp', 'affirm', 'klarna'];
+    this._vendorsSupportedForDualInstall = ['ap', 'qp', 'affirm', 'klarna','shopPay'];
   }
 
   /**
@@ -40,10 +40,10 @@ class Modal {
         event.target.id = 'sezzle-modal-return';
         if (!event.target.classList.contains('no-sezzle-info')) {
           let modalNode;
-          // Makes sure to get rid of AP, QP, Affirm, and Klarna modals in our Sezzle modal event listener
+          // Makes sure to get rid of AP, QP, ShopPay, Affirm, and Klarna modals in our Sezzle modal event listener
           const modals = document.getElementsByClassName('sezzle-checkout-modal-lightbox');
           Array.prototype.forEach.call(modals, (element) => {
-            if (!element.classList.contains('sezzle-ap-modal' || 'sezzle-qp-modal' || 'sezzle-affirm-modal' || 'sezzle-klarna-modal')) {
+            if (!element.classList.contains('sezzle-ap-modal' || 'sezzle-qp-modal' || 'sezzle-affirm-modal' ||'sezzle-shopPay-modal' || 'sezzle-klarna-modal')) {
               modalNode = element;
             }
           });
