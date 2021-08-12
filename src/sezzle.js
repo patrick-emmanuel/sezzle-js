@@ -1064,6 +1064,7 @@ SezzleJS.prototype.addClickEventForModal = function (sezzleElement, configGroupI
     }.bind(this));
   }.bind(this));
  };
+
 /**
  * This function will return the ISO 3166-1 alpha-2 country code
  * from the user's IP
@@ -1323,6 +1324,7 @@ SezzleJS.prototype.initWidget = function () {
     if (document.getElementsByClassName('quadpay-modal-info-link').length > 0) {
       this.renderQPModal();
     }
+    
     if (document.getElementsByClassName('affirm-modal-info-link').length > 0) {
       this.renderAffirmModal()
     }
