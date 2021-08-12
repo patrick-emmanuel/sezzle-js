@@ -22,8 +22,6 @@ const SezzleJS = function (options) {
   this.minPrice = options.minPrice || 0; // in cents
   this.maxPrice = options.maxPrice || 250000; // in cents
   this.altModalHTML = options.altLightboxHTML || '';
-  // if doing widget with both Sezzle or shopPay - the modal to display:
-  this.shopPayModalHTML = options.shopPayModalHTML || '';
   // if doing widget with both Sezzle or afterpay - the modal to display:
   this.apModalHTML = options.apModalHTML || '';
   // if doing widget with both Sezzle or quadpay - the modal to display:
@@ -560,28 +558,6 @@ SezzleJS.prototype.renderAwesomeSezzle = function (element, renderelement, index
         affirmAnchor.appendChild(affirmLinkIconNode);
         sezzleButtonText.appendChild(affirmAnchor);
         break;
-      case 'shoppay-logo':
-        var shoppayNode = document.createElement('img');
-        shoppayNode.className = 'sezzle-shoppay-logo shoppay-modal-info-link no-sezzle-info';
-        shoppayNode.src = 'https://media.sezzle.com/sezzle-credit-website-assets/shop-pay-logo.svg';
-        sezzleButtonText.appendChild(shoppayNode);
-        break;
-      case 'shoppay-info-icon':
-          var shopPayInfoIconNode = document.createElement('code');
-          shopPayInfoIconNode.className = 'shoppay-modal-info-link no-sezzle-info';
-          shopPayInfoIconNode.innerHTML = '&#9432;';
-          sezzleButtonText.appendChild(shopPayInfoIconNode);
-          break;
-      case 'shoppay-link-icon':
-            var shopPayAnchor = document.createElement('a');
-            shopPayAnchor.href = this.configGroups[configGroupIndex].shopPayLink;
-            shopPayAnchor.target = '_blank';
-            var shopPayLinkIconNode = document.createElement('code');
-            shopPayLinkIconNode.className = 'shoppay-info-link';
-            shopPayLinkIconNode.innerHTML = '&#9432;';
-            shopPayAnchor.appendChild(shopPayLinkIconNode);
-            sezzleButtonText.appendChild(shopPayAnchor);
-            break;
       case 'afterpay-logo':
         var apNode = document.createElement('img');
         apNode.className = 'sezzle-afterpay-logo ap-modal-info-link no-sezzle-info';
@@ -1028,34 +1004,6 @@ SezzleJS.prototype.renderAffirmModal = function () {
   });
 };
 /**
- * This function renders the ShopPay modal based on if you include shoppay-modal-info-link
- * Also adds the event for open and close modals
- * to respective buttons
- */
-SezzleJS.prototype.renderShopPayModal = function () {
-  var modalNode = document.createElement('div');
-  modalNode.className = 'sezzle-checkout-modal-lightbox close-sezzle-modal sezzle-shoppay-modal';
-  modalNode.style = 'position: center';
-  modalNode.style.display = 'none';
-  modalNode.innerHTML = this.shopPayModalHTML;
-  document.getElementsByTagName('html')[0].appendChild(modalNode);
-  // Event listener for close in modal
-  Array.prototype.forEach.call(document.getElementsByClassName('close-sezzle-modal'), function (el) {
-    el.addEventListener('click', function () {
-      // Display the modal node
-      modalNode.style.display = 'none';
-    });
-  });
-  // Event listener to prevent close in modal if click happens within sezzle-checkout-modal
-  let sezzleModal = document.getElementsByClassName('sezzle-modal')[0];
-  // backwards compatability check
-  if (!sezzleModal) sezzleModal = document.getElementsByClassName('sezzle-checkout-modal-lightbox')[0];
-  sezzleModal.addEventListener('click', function (event) {
-    // stop propagating the event to the parent sezzle-checkout-modal-lightbox to prevent the closure of the modal
-    event.stopPropagation();
-  });
-};
-/**
  * This function add events to the button in sezzle widget
  * to open the modal
  */
@@ -1115,17 +1063,6 @@ SezzleJS.prototype.addClickEventForModal = function (sezzleElement, configGroupI
       this.logEvent('onclick-affirm', configGroupIndex);
     }.bind(this));
   }.bind(this));
-
-   // for ShopPay
-   var shopPayModalLinks = sezzleElement.getElementsByClassName('shoppay-modal-info-link');
-   Array.prototype.forEach.call(shopPayModalLinks, function (modalLink) {
-     modalLink.addEventListener('click', function () {
-       // Show modal node
-       document.getElementsByClassName('sezzle-shoppay-modal')[0].style.display = 'block';
-       // log on click event
-       this.logEvent('onclick-shoppay', configGroupIndex);
-     }.bind(this));
-   }.bind(this));
  };
 /**
  * This function will return the ISO 3166-1 alpha-2 country code
@@ -1388,9 +1325,6 @@ SezzleJS.prototype.initWidget = function () {
     }
     if (document.getElementsByClassName('affirm-modal-info-link').length > 0) {
       this.renderAffirmModal()
-    }
-    if (document.getElementsByClassName('shoppay-modal-info-link').length > 0) {
-      this.renderShopPayModal()
     }
   }
   function sezzleWidgetCheckInterval() {
