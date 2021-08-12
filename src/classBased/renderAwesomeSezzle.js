@@ -224,8 +224,8 @@ class renderAwesomeSezzle {
         const shopPayInfoIconNode = document.createElement('button');
         shopPayInfoIconNode.role = 'button';
         shopPayInfoIconNode.type = 'button';
-        shopPayInfoIconNode.ariaLabel = 'Learn More about Affirm';
-        shopPayInfoIconNode.className = 'affirm-modal-info-link no-sezzle-info';
+        shopPayInfoIconNode.ariaLabel = 'Learn More about ShopPay';
+        shopPayInfoIconNode.className = 'shopPay-modal-info-link no-sezzle-info';
         shopPayInfoIconNode.innerHTML = '&#9432;';
         shopPayInfoIconNode.ariaHasPopup = 'true';
         shopPayInfoIconNode.style = `display: inline; width: auto; min-height: 9px; max-height: 20px; font-size: ${this._config.configGroups[configGroupIndex].fontSize}px;`;
@@ -237,8 +237,8 @@ class renderAwesomeSezzle {
         shopPayAnchor.href = this._config.shopPayLink;
         shopPayAnchor.target = '_blank';
         const shopPayLinkIconNode = document.createElement('code');
-        shopPayLinkIconNode.ariaLabel = 'Open Affirm in a new tab';
-        shopPayLinkIconNode.className = 'affirm-info-link';
+        shopPayLinkIconNode.ariaLabel = 'Open ShopPay in a new tab';
+        shopPayLinkIconNode.className = 'shopPay-info-link';
         shopPayLinkIconNode.innerHTML = '&#9432;';
         shopPayAnchor.appendChild(shopPayLinkIconNode);
         sezzleButtonText.appendChild(shopPayAnchor);
