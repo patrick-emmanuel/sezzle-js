@@ -1324,7 +1324,7 @@ SezzleJS.prototype.initWidget = function () {
     if (document.getElementsByClassName('quadpay-modal-info-link').length > 0) {
       this.renderQPModal();
     }
- 
+
     if (document.getElementsByClassName('affirm-modal-info-link').length > 0) {
       this.renderAffirmModal()
     }
