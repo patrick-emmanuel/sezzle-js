@@ -107,14 +107,14 @@ class Promotions {
 
     this._promoStartDate = new Date(promotions.beginAt) || new Date('1900-01-01');
     this._promoEndDate = new Date(promotions.endAt) || new Date('3000-12-31');
-    this._promoCurrency = promotions.currency || 'USD'; //
+    this._promoCurrency = promotions.currencyCode || 'USD';
     this._promoReward = promotions.spendAwardInCents || 500;
-    this._promoType = promotions.type || '';
+    this._promoType = promotions.type === 1 ? 'back' : 'off'; // confirm which is which, and which is default
     this._promoNewUser = promotions.isNewUserOnly || false;
     this._promoFirstPurchase = promotions.isFirstPurchaseFromMerchantOnly || false;
     this._promoWidgetEnabled = promotions.widgetEnabled || true;
-    this._promoCode = promotions.uuid || '';
-    this._promoThreshold = promotions.spend_award_threshold_cents || 0; //
+    this._promoCode = promotions.promoCode || '';
+    this._promoThreshold = promotions.spendAwardThresholdInCents || 0;
 
     this._spendActive = this._promoWidgetEnabled && this._promoStartDate < new Date() && this._promoEndDate > new Date();
     this._formatter = new Intl.NumberFormat(this.language, {
@@ -132,7 +132,7 @@ if (this._promoNewUser) {
 this._promoTemplateComponents.append(this._promoTranslations.receive);
 this._promoTemplateComponents.append(this._formatter.format(this._promoReward / 100));
 this._promoTemplateComponents.append(this._promoCurrency);
-this._promoTemplateComponents.append(this._promoTranslations.type[this._promoType]); // check exact values received
+this._promoTemplateComponents.append(this._promoTranslations.type[this._promoType]);
 if (this._promoCode) {
   this._promoTemplateComponents.append(this._promoTranslations.with);
   this._promoTemplateComponents.append(this._promoTranslations.promoCode);

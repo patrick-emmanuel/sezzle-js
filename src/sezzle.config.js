@@ -196,3 +196,31 @@ exports.newConfig = {
   "minPrice": 0,
   "maxPrice": 2000000
 }
+
+exports.promoMinConfig = {
+	uuid: '49261e2d-72af-4358-bf97-3035ce9f11a1',
+	widgetEnabled: true,
+	beginAt: '2021-06-07',
+	endAt: '2021-08-31',
+	currencyCode: 'USD',
+	spendAwardinCents: 500,
+	promoCode: '',
+	type: 1, // 'post-capture'
+	isNewUserOnly: false,
+	isFirstPurchaseFromMerchantOnly: false,
+	spendAwardThresholdInCents: 0
+}
+
+exports.promoMaxConfig = {
+	uuid: '49261e2d-72af-4358-bf97-3035ce9f11a1',
+	widgetEnabled: true,
+	beginAt: '2021-06-07',
+	endAt: '2021-08-31',
+	currencyCode: 'CAD',
+	spendAwardinCents: 1000,
+	promoCode: 'NEW2SEZZLE',
+	type: 2, // 'post-order'
+	isNewUserOnly: true,
+	isFirstPurchaseFromMerchantOnly: true,
+	spendAwardThresholdInCents: 3500
+}
