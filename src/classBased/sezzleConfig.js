@@ -287,7 +287,6 @@ class sezzleConfig {
       altModalHTML: this.options.altLightboxHTML || '',
       apModalHTML: this.options.apModalHTML || '',
       qpModalHTML: this.options.qpModalHTML || '',
-      shopPayModalHTML: this.options.shopPayModalHTML || '',
       shopPayLink: this.options.shopPayLink || 'https://shop.app/shop-pay',
       affirmModalHTML: this.options.affirmModalHTML || '',
       shopPayModalHTML: this.options.shopPayModalHTML || '',
