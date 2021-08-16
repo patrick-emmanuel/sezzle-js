@@ -767,7 +767,7 @@
     border: none;
 }
 
-.sezzle-info-icon, .ap-modal-info-link, .qp-modal-info-link, .quadpay-modal-info-link, .affirm-modal-info-link, .klarna-modal-info-link {
+.sezzle-info-icon, .ap-modal-info-link, .qp-modal-info-link, .quadpay-modal-info-link, .affirm-modal-info-link, .shopPay-modal-info-link, .klarna-modal-info-link {
 	font-size: inherit;
 	margin: unset;
 	padding: unset;
@@ -823,7 +823,23 @@
   margin-left: -7px;
 }
 
+.sezzle-shopPay-logo {
+  vertical-align: baseline;
+  max-height: 20px;
+  margin-bottom: 12px !important;
+  margin-left: -7px;
+}
+
 button.affirm-modal-info-link {
+  cursor: pointer;
+  margin-left: -5px !important;
+  color: inherit;
+  background:none;
+  border: none;
+  padding: 0px;
+}
+
+button.shopPay-modal-info-link {
   cursor: pointer;
   margin-left: -5px !important;
   color: inherit;

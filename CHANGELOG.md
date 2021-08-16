@@ -342,3 +342,6 @@ These are the config options that either aren’t working, aren’t used, or sho
 ## v21.6.5 - Released 2 Aug 2021
 * Add error event logging
 * fix competitor event bug
+
+## v21.8.0 - Released 16 Aug 2021
+* Add shopPay Dual Install (altVersionTemplate, shopPayModal and shopPayLink)

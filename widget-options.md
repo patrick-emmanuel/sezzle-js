@@ -138,6 +138,9 @@ As with targetXPath, prepend IDs with '#', classes with '.', and append tag name
   * %%klarna-logo-grey%% - Klarna logo image in greyscale
   * %%klarna-logo-white%% - Klarna logo image for dark mode
   * %%klarna-info-icon%% - Info icon that, when clicked, opens the Klarna modal HTML provided in klarnaModalHTML
+  * %%shoppay-logo%% - ShopPay logo image
+  * %%shoppay-info-icon%% - Info icon that, when clicked, opens the ShopPay modal HTML provided in shopPayModalHTML
+  * %%shoppay-link-icon%% - Info icon that, when clicked, opens the ShopPay link provided in shopPayLink
 
 `splitPriceElementsOn` (optional)
 
@@ -403,6 +406,18 @@ As with targetXPath, prepend IDs with '#', classes with '.', and append tag name
 **Default**: ''
 
 `klarnaModalHTML` (optional)
+
+**Purpose**: Competitor's modal window to be rendered when widget is clicked at competitor's logo.<br/>
+**Type**: string<br/>
+**Default**: ''
+
+`shopPayLink` (optional)
+
+**Purpose**: Link to competitor's terms of service when widget is clicked at competitor's link.<br/>
+**Type**: string<br/>
+**Default**: 'https://shop.app/shop-pay'
+
+`shopPayModalHTML` (optional)
 
 **Purpose**: Competitor's modal window to be rendered when widget is clicked at competitor's logo.<br/>
 **Type**: string<br/>
