@@ -118,7 +118,10 @@ $font-family: Comfortaa;
     .sezzle-header-regular {
         color: #4b4b4b;
         line-height: 1.2;
-        font-family: $font-family;
+        
+        span {
+            font-family: $font-family;
+        }
     }
 
     .sezzle-header {
