@@ -345,3 +345,6 @@ These are the config options that either aren’t working, aren’t used, or sho
 
 ## v21.8.0 - Released 16 Aug 2021
 * Add shopPay Dual Install (altVersionTemplate, shopPayModal and shopPayLink)
+
+## v21.8.1 - Released 18 Aug 2021
+* Update EU fr-FR language widget copy
