@@ -12,7 +12,7 @@ class language {
       de: `oder ${this._numberOfPayments} zinslose Zahlungen von je %%price%% mit %%logo%% %%info%%`,
       es: `o ${this._numberOfPayments} pagos sin intereses de %%price%% con %%logo%% %%info%%`,
       'en-GB': `or ${this._numberOfPayments} payments of %%price%% with %%logo%% %%info%% - no fee`,
-      'fr-FR': `ou ${this._numberOfPayments} paiements de %%price%% avec %%logo%% %%info%% – pas de frais`,
+      'fr-FR': `ou ${this._numberOfPayments} paiements de %%price%% avec %%logo%% %%info%% – sans frais`,
       'de-DE': `oder ${this._numberOfPayments} mal %%price%% mit %%logo%% %%info%% - kostenlos`,
       'es-ES': `o ${this._numberOfPayments} cuotas de %%price%% con %%logo%% %%info%% - sin coste`,
     };
