@@ -15,6 +15,7 @@ class language {
       'fr-FR': `ou ${this._numberOfPayments} paiements de %%price%% avec %%logo%% %%info%% – sans frais`,
       'de-DE': `oder ${this._numberOfPayments} mal %%price%% mit %%logo%% %%info%% - kostenlos`,
       'es-ES': `o ${this._numberOfPayments} cuotas de %%price%% con %%logo%% %%info%% - sin coste`,
+      'it-IT': `o ${this._numberOfPayments} pagamenti di %%price%% con %%logo%% %%info%% - nessuna commissione`,
     };
     this._language = null;
     this._browserLanguage = null;
