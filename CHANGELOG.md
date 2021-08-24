@@ -348,6 +348,7 @@ These are the config options that either aren’t working, aren’t used, or sho
 
 ## v21.8.1 - Released 18 Aug 2021
 * Update EU fr-FR language widget copy
+* add Shop Pay for competitor dual install
 
 ## v21.8.2 - Released 24 Aug 2021
 * Add italian (it-IT) widget for EU
